@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Books list{% endblock %}
+
+{% block content %}
+<h2>autos</h2>
+<ul>
+    {% for autos in all_the_autoss %}
+        <a href="{{ autos.id }}/"><b>{{ autos.get_full_title }}</b></a><br>
+        {{ autos.text }}<br>
+        <br>
+    {% endfor %}
+</ul>
+
+<a href="../add/">autos</a><br>
+{% endblock %}
